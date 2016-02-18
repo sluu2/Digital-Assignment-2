@@ -14,7 +14,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create
 function preload() {
     
     /* MUSIC AND SOUNDS*/
-    game.load.audio('backgroundmusic', ['assets/music/tf2remix.ogg']);
+    game.load.audio('backgroundmusic', ['assets/music/allegropresto.ogg']);
     game.load.audio('mariojump', ['assets/sound effects/mariojump.ogg']);
     
     /* SPRITES AND TILEMAPS */
@@ -130,7 +130,7 @@ function create() {
 }
 
 function update() {
-    //game.debug.body(player);
+    game.debug.body(player);
     
     game.physics.arcade.collide(player, layer);
     game.physics.arcade.collide(player, goal);
